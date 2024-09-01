@@ -1,9 +1,63 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0" version="24.7.8">
   <diagram name="Page-1" id="zqm2behOPVpj1OHrsjdw">
-    <mxGraphModel>
+    <mxGraphModel dx="1687" dy="931" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="j2663nJPo5ti7IUqNZ4e-1" value="user" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="610" y="194" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="j2663nJPo5ti7IUqNZ4e-2" value="add product to cart" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="144" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="j2663nJPo5ti7IUqNZ4e-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.008;entryY=0.6;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="j2663nJPo5ti7IUqNZ4e-1" target="j2663nJPo5ti7IUqNZ4e-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="j2663nJPo5ti7IUqNZ4e-4" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="304" as="sourcePoint" />
+            <mxPoint x="860" y="304" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j2663nJPo5ti7IUqNZ4e-5" value="user" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="610" y="394" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="j2663nJPo5ti7IUqNZ4e-6" value="view cart" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="344" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="j2663nJPo5ti7IUqNZ4e-7" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.008;entryY=0.6;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="j2663nJPo5ti7IUqNZ4e-5" target="j2663nJPo5ti7IUqNZ4e-6" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="j2663nJPo5ti7IUqNZ4e-8" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="504" as="sourcePoint" />
+            <mxPoint x="860" y="504" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j2663nJPo5ti7IUqNZ4e-13" value="user" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="610" y="594" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="j2663nJPo5ti7IUqNZ4e-14" value="remove items from cart" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="544" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="j2663nJPo5ti7IUqNZ4e-15" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.008;entryY=0.6;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="j2663nJPo5ti7IUqNZ4e-13" target="j2663nJPo5ti7IUqNZ4e-14" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="j2663nJPo5ti7IUqNZ4e-16" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="704" as="sourcePoint" />
+            <mxPoint x="860" y="704" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j2663nJPo5ti7IUqNZ4e-17" value="&lt;div&gt;As a user I want cart functionality as below&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. I want to be able to add the products I wish to order to my cart&lt;/div&gt;&lt;div&gt;2. I want to be able to view my cart having all items I added&lt;br&gt;&lt;/div&gt;&lt;div&gt;3. I want to be able to remove items from my cart&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="140" y="194" width="270" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="j2663nJPo5ti7IUqNZ4e-18" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="650" as="sourcePoint" />
+            <mxPoint x="540" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
