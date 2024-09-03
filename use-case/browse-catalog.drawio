@@ -1,58 +1,39 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0" version="24.7.8">
-  <diagram name="Page-1" id="QaPPVJEE2EKimQlgLVVY">
-    <mxGraphModel dx="1687" dy="931" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        <mxCell id="hXulT5Q8rXNCf8CjWqoO-5" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="hXulT5Q8rXNCf8CjWqoO-1" target="hXulT5Q8rXNCf8CjWqoO-2">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="hXulT5Q8rXNCf8CjWqoO-1" value="user" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="580" y="120" width="30" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="hXulT5Q8rXNCf8CjWqoO-2" value="get catalog" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="840" y="50" width="120" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="hXulT5Q8rXNCf8CjWqoO-6" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="450" y="260" as="sourcePoint" />
-            <mxPoint x="1010" y="260" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="hXulT5Q8rXNCf8CjWqoO-7" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" source="hXulT5Q8rXNCf8CjWqoO-8" target="hXulT5Q8rXNCf8CjWqoO-9" parent="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="hXulT5Q8rXNCf8CjWqoO-8" value="user" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="580" y="420" width="30" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="hXulT5Q8rXNCf8CjWqoO-9" value="search catalog" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="840" y="350" width="120" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="hXulT5Q8rXNCf8CjWqoO-10" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="450" y="580" as="sourcePoint" />
-            <mxPoint x="1010" y="580" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="hXulT5Q8rXNCf8CjWqoO-11" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" source="hXulT5Q8rXNCf8CjWqoO-12" target="hXulT5Q8rXNCf8CjWqoO-13" parent="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="hXulT5Q8rXNCf8CjWqoO-12" value="user" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="580" y="740" width="30" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="hXulT5Q8rXNCf8CjWqoO-13" value="get product details" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="840" y="670" width="120" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="hXulT5Q8rXNCf8CjWqoO-14" value="&lt;div&gt;As a user I want to browse the products catalog&lt;br&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. I should be able to get list of products having basic information&lt;br&gt;2. I should be able to search a product using a keyword&lt;br&gt;3. I should be able to get details of any product&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="40" y="75" width="340" height="115" as="geometry" />
-        </mxCell>
-        <mxCell id="hXulT5Q8rXNCf8CjWqoO-15" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="430" y="650" as="sourcePoint" />
-            <mxPoint x="430" y="160" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
+<mxfile host="65bd71144e">
+    <diagram name="Page-1" id="QaPPVJEE2EKimQlgLVVY">
+        <mxGraphModel dx="1387" dy="1140" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="hXulT5Q8rXNCf8CjWqoO-5" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="hXulT5Q8rXNCf8CjWqoO-1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="184.0000000000034" y="355" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="hXulT5Q8rXNCf8CjWqoO-1" value="user" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+                    <mxGeometry x="64" y="365" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="hXulT5Q8rXNCf8CjWqoO-2" value="get catalog" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="185" y="315" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="hXulT5Q8rXNCf8CjWqoO-7" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="hXulT5Q8rXNCf8CjWqoO-8" target="hXulT5Q8rXNCf8CjWqoO-9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="hXulT5Q8rXNCf8CjWqoO-8" value="user" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="365" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="hXulT5Q8rXNCf8CjWqoO-9" value="search catalog" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="570" y="315" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="hXulT5Q8rXNCf8CjWqoO-11" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="hXulT5Q8rXNCf8CjWqoO-12" target="hXulT5Q8rXNCf8CjWqoO-13" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="hXulT5Q8rXNCf8CjWqoO-12" value="user" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+                    <mxGeometry x="814" y="365" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="hXulT5Q8rXNCf8CjWqoO-13" value="get product details" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="934" y="315" width="120" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
 </mxfile>
