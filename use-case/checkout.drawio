@@ -1,0 +1,28 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0" version="24.7.8">
+  <diagram name="Page-1" id="XR3ghIMzxu3SvxIW-afq">
+    <mxGraphModel dx="1509" dy="799" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NhONW-SQkNeBopmzhqSA-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="NhONW-SQkNeBopmzhqSA-1" target="NhONW-SQkNeBopmzhqSA-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NhONW-SQkNeBopmzhqSA-1" value="user" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="700" y="440" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NhONW-SQkNeBopmzhqSA-2" value="checkout" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="910" y="350" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="NhONW-SQkNeBopmzhqSA-4" value="&lt;div&gt;As a user I want to checkout with my cart with following options&lt;/div&gt;&lt;div&gt;1. I want to see total amount&lt;/div&gt;&lt;div&gt;2. I want to see delivery charges&lt;br&gt;&lt;/div&gt;&lt;div&gt;3. I want to see GST amount&lt;/div&gt;&lt;div&gt;4. I want to be able to pay with credit card or cash on delivery&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="315" width="430" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="NhONW-SQkNeBopmzhqSA-5" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="620" as="sourcePoint" />
+            <mxPoint x="600" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
