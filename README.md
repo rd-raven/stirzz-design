@@ -7,4 +7,7 @@ Other than design docs this repository also includes helping files which are not
 1. use-case.md
 
 #### use-case.md
-Describes all the use-cases for this app
+Describes all the use-cases for stirzz
+
+#### hld.md
+High Level Diagram for stirzz
