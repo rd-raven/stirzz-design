@@ -1,0 +1,140 @@
+<mxfile host="65bd71144e">
+    <diagram id="WrSKoHDkt36mXYgP9mdu" name="Page-1">
+        <mxGraphModel dx="1736" dy="-327" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="54" value="Weak Entity" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=1;resizeParent=0;resizeLast=1;shadow=1;align=center;swimlaneFillColor=none;strokeColor=default;perimeterSpacing=0;swimlaneLine=1;glass=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="-370" y="959.51" width="180" height="70.49" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="Simple Attribute&#10;Indexed Attribute _idx" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="54" vertex="1">
+                    <mxGeometry y="30" width="180" height="40.489999999999995" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="Entity" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="-830" y="959.51" width="160" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="Simple Attribute&#10;Indexed Attribute _idx" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="56" vertex="1">
+                    <mxGeometry y="30" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="&lt;span style=&quot;font-size: 45px;&quot;&gt;Legend&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=0;sketch=1;strokeWidth=1;fontSize=45;fontStyle=0" parent="1" vertex="1">
+                    <mxGeometry x="-625" y="880" width="170" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="120" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="-1070" y="1080" width="420" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="101" value="" style="group;fillColor=none;strokeColor=#82b366;container=0;" parent="120" vertex="1" connectable="0">
+                    <mxGeometry x="70" width="260" height="160.51" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" value="" style="group;container=0;fillColor=#E6E6E6;strokeColor=#36393d;" parent="120" vertex="1" connectable="0">
+                    <mxGeometry width="420" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;exitX=1.001;exitY=0.439;exitDx=0;exitDy=0;exitPerimeter=0;" parent="120" edge="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="100" y="123.50999999999999" as="sourcePoint"/>
+                        <mxPoint x="300" y="14" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="60" value="[attribute-name: ]&amp;nbsp;parent_table__column == child_table__column [ :attribute-name]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="58" vertex="1" connectable="0">
+                    <mxGeometry x="0.0901" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="61" value="&lt;span style=&quot;font-size: 11px; background-color: rgb(255, 255, 255);&quot;&gt;Mandatory One to Atleast One or Many Relation&lt;br&gt;with foreign keys defined on connecting line&lt;br&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=0;sketch=1;strokeWidth=1;" parent="120" vertex="1">
+                    <mxGeometry x="70" y="130.51" width="260" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="121" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="-450" y="1080" width="420" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" value="" style="group;fillColor=#E6E6E6;fontColor=#333333;strokeColor=#666666;container=0;" parent="121" vertex="1" connectable="0">
+                    <mxGeometry width="420" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="95" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;endFill=0;" parent="121" edge="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="100" y="109.99500000000012" as="sourcePoint"/>
+                        <mxPoint x="300" y="9.995000000000118" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="97" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;[attribute-name: ] parent_table__column == child_table__column&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&amp;nbsp;[ :attribute-name]&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" parent="95" vertex="1" connectable="0">
+                    <mxGeometry x="0.0675" y="-1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="96" value="&lt;span style=&quot;font-size: 11px; background-color: rgb(255, 255, 255);&quot;&gt;Mandatory One to Mandatory One Relation&lt;br&gt;with foreign keys defined on connecting line&lt;br&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=0;sketch=1;strokeWidth=1;" parent="121" vertex="1">
+                    <mxGeometry x="80" y="113.99500000000012" width="260" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="122" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="-1070" y="1290" width="430" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="102" value="" style="group;fillColor=#E6E6E6;container=0;strokeColor=#666666;gradientColor=none;" parent="122" vertex="1" connectable="0">
+                    <mxGeometry width="430" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;startArrow=ERzeroToOne;" parent="122" edge="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="100" y="120" as="sourcePoint"/>
+                        <mxPoint x="340" y="20" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="75" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;[attribute-name: ]&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;parent_table__column == child_table__column&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&amp;nbsp;[ :attribute-name]&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" parent="74" vertex="1" connectable="0">
+                    <mxGeometry x="-0.0528" y="-1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="76" value="&lt;span style=&quot;font-size: 11px; background-color: rgb(255, 255, 255);&quot;&gt;Optional One to Optional Many Relation&lt;br&gt;with foreign keys defined on connecting line&lt;br&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=0;sketch=1;strokeWidth=1;" parent="122" vertex="1">
+                    <mxGeometry x="100" y="130.51" width="260" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="124" value="In all above relations if [attribute-name] is omitted, it means the primary key is used" style="text;html=1;strokeColor=none;fillColor=#E6E6E6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="-885" y="1490" width="690" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="126" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="-530" y="1290" width="500" height="171" as="geometry"/>
+                </mxCell>
+                <mxCell id="93" value="" style="group;fillColor=#E6E6E6;fontColor=#333333;strokeColor=#666666;container=0;" parent="126" vertex="1" connectable="0">
+                    <mxGeometry width="500" height="171" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" value="" style="endArrow=none;html=1;rounded=0;fontSize=12;" parent="126" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="175" y="140.99500000000012" as="sourcePoint"/>
+                        <mxPoint x="175" y="19.99500000000012" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="84" value="Entity" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=20;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="126" vertex="1">
+                    <mxGeometry x="11" y="46.00500000000011" width="85" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="attributes" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="84" vertex="1">
+                    <mxGeometry y="20" width="85" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="86" style="edgeStyle=none;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;fontSize=12;startArrow=none;startFill=0;" parent="126" source="85" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="175" y="70" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="87" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;" parent="126" edge="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="175" y="60.99500000000012" as="sourcePoint"/>
+                        <mxPoint x="395" y="20.99500000000012" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="92" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;[attribute-name: ]&amp;nbsp;&lt;/span&gt;parent_table__key == child_table__key&lt;span style=&quot;font-size: 11px;&quot;&gt;&amp;nbsp;[ :attribute-name]&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" parent="87" vertex="1" connectable="0">
+                    <mxGeometry x="0.0705" y="2" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="88" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToOne;startArrow=ERmandOne;" parent="126" edge="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="175" y="90.99500000000012" as="sourcePoint"/>
+                        <mxPoint x="395" y="59.99500000000012" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="89" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;" parent="126" edge="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="175" y="120.99500000000012" as="sourcePoint"/>
+                        <mxPoint x="395" y="89.99500000000012" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="90" value="&lt;span style=&quot;font-size: 11px; background-color: rgb(255, 255, 255);&quot;&gt;Multiple Attributes Relationship&lt;br&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=0;sketch=1;strokeWidth=1;" parent="126" vertex="1">
+                    <mxGeometry x="128" y="140.99500000000012" width="260" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
