@@ -121,7 +121,7 @@ __Keywords__
 ## Product Variation
 Each product could have multiple variations having same properties in common [(Base Product)](#base-product) but with some differenes [(Product Variation)](#product-variation). The SKU property belongs to Product Variation because each variation is a different product in itself only sharing same virtual attributes (Base Product) with it's other variations.
 
-## Source
+### Source
 Product Variation should be added by Product Manager via DBA or a panel should be provided to Product Manager to enter Product (including [__Base Product__](#base-product) and [__Product Variation__](#product-variation)).
 
 ### Model Attributes
@@ -203,6 +203,63 @@ __depth__
 
 ### Persistence
 Dimension should be persistent, having it's own storage unit, it has no indexes.
+
+___
+___
+
+![Inventory](data-model/data-model-inventory.svg)
+## Inventory Item
+Inventory Item holds data for inventory items i.e. products but from view point of inventory management e.g. products in stock.
+
+### Source
+Inventory Items should be added by Inventory Manager via DBA or a panel should be provided to Inventory Manager to enter Inventory Items.
+
+### Model Attributes
+__SKU__
+: SKU of the product in inventory.
+
+__Stock Count__
+: number of units in stock.
+
+### Persistence
+Inventory Item should be persistent, having it's own storage unit with indexes.
+
+### Indexes
+__SKU__
+: SKU is indexed field to allow for searching inventory item by SKU.
+
+___
+___
+
+![Cart](data-model/data-model-cart.svg)
+## Cart Item
+Cart Item holds items (products) added to the shopping cart by user from the catalog during the shopping journey.
+
+### Source
+Cart Items are added or removed by user while shopping. This model should be behind some cache or run by events for high speed frequent updates.
+
+### Model Attributes
+__User__
+: User who this cart item belongs to.
+
+__SKU__
+: SKU of item.
+
+__Name__
+: Name of the item.
+
+__Price__
+: Price of the item.
+
+__Units__
+: Number of units of this item in the cart.
+
+### Persistence
+Cart Item should be persistent, having it's own storage unit with indexes.
+
+### Indexes
+__User__
+: User is indexed field to allow querying all cart items belonging to the same user.
 
 ___
 \
