@@ -231,7 +231,7 @@ __SKU__
 ___
 ___
 
-![Cart](data-model/data-model-cart.svg)
+![Order](data-model/data-model-order.svg)
 ## Cart Item
 Cart Item holds items (products) added to the shopping cart by user from the catalog during the shopping journey.
 
