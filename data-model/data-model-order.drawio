@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="WrSKoHDkt36mXYgP9mdu" name="Page-1">
-        <mxGraphModel dx="1491" dy="322" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+        <mxGraphModel dx="1863" dy="627" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -10,7 +10,7 @@
                 <mxCell id="11" value="User  _idx&#10;SKU&#10;Name&#10;Price&#10;Units" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="10" vertex="1">
                     <mxGeometry y="30" width="160" height="90" as="geometry"/>
                 </mxCell>
-                <mxCell id="69" value="&lt;font style=&quot;font-size: 28px;&quot;&gt;Cart&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=0;sketch=1;strokeWidth=1;fontSize=28;fontStyle=0" parent="1" vertex="1">
+                <mxCell id="69" value="&lt;font style=&quot;font-size: 28px;&quot;&gt;Order&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=0;sketch=1;strokeWidth=1;fontSize=28;fontStyle=0" parent="1" vertex="1">
                     <mxGeometry x="-588" y="10" width="75" height="40" as="geometry"/>
                 </mxCell>
             </root>
