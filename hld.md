@@ -3,6 +3,19 @@
 
 This diagram focuses on how the communication between internal services looks like to achive functionality of stirzz app. The scope of this diagram does not include infrastructure, routing or security.
 
+### Services
+**Catalog Service**
+: Catalog Service is responsible for managing catalog shown to the users.
+
+**Product Service**
+: Product Service is reponsible for handling source of product details i.e. product details entered by Product Manager. Product updates in this service should be communicated to other services as this service holds the source of truth for product details.
+
+**Order Service**
+: Order Service is responsible for hadling user orders and their confirmation, additionally it also hold responsibility for hadling shopping cart which can be separated out to another service later if required.
+
+**Inventory Service**
+: Inventory Service is responsible for inventory management.
+
 ## Infrastructure
 ![Infrastructure](hld/infrastructure.svg)
 
