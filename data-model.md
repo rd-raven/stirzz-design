@@ -1,10 +1,10 @@
-<h1 style="text-align: center">Data Models</h1>
+<h1 style="text-align: center">Business Data Models</h1>
 
 ___
 
-This section explains the data models, their attributes and the type of persistence for these models/attributes. The [legend](#legend) for diagrams is at the bottom of this document.
+This section explains the business data models, their attributes and the type of persistence for these models/attributes. The [legend](#legend) for diagrams is at the bottom of this document.
 
-![Data Model Category](data-model/data-model-catalog.svg)
+![Data Model Category](data-model/business-data-model/data-model-catalog.svg)
 ## Catalog Item
 Catalog item represents a single item in [catalog](#catalog) shown to the user while browsing the catalog, this item should be able to provide a good picture of the product at a glance with minimal essential information.
 
@@ -79,7 +79,7 @@ Category should be persistent, having it's own storage unit, it has no indexes.
 ___
 ___
 
-![Data Model Product](data-model/data-model-product.svg)
+![Data Model Product](data-model/business-data-model/data-model-product.svg)
 ## Base Product
 Base Product is part of product which is common to all the [variations](#product-variation) of the product.
 
@@ -207,7 +207,7 @@ Dimension should be persistent, having it's own storage unit, it has no indexes.
 ___
 ___
 
-![Inventory](data-model/data-model-inventory.svg)
+![Inventory](data-model/business-data-model/data-model-inventory.svg)
 ## Inventory Item
 Inventory Item holds data for inventory items i.e. products but from view point of inventory management e.g. products in stock.
 
@@ -231,7 +231,7 @@ __SKU__
 ___
 ___
 
-![Order](data-model/data-model-order.svg)
+![Order](data-model/business-data-model/data-model-order.svg)
 ## Cart Item
 Cart Item holds items (products) added to the shopping cart by user from the catalog during the shopping journey.
 
@@ -289,8 +289,40 @@ ___
 \
 <br />
 
-# Complete Data Model
-![Complete Data Model](data-model/data-model.svg)
+# Complete Business Data Model
+![Complete Business Data Model](data-model/business-data-model/data-model.svg)
 
 # Legend
-![Complete Data Model](data-model/data-model-legend.svg)
+![Complete Data Model](data-model/business-data-model/data-model-legend.svg)
+
+___
+\
+\
+\
+<br />
+<h1 style="text-align: center">Meta Data Models</h1>
+
+___
+
+This section explains the meta data models, these models might be partial or transient as their purpose is to support the operations on data and not be part of the data.
+
+### Partial Single Attributes
+Partial single attributes are the meta attributes which don't exist on their own but can be added to any business data model for additional context. Below is the list of these attributes and their persistence type.
+
+#### Version
+`version` attribute reflects the current version of an entity and is useful for achieving **optimistic locking** and also helps in ETag generation.
+
+**Persistence**
+: `version` attribute is persistent and uses space inside storage unit of the business model to which it's added.
+
+#### ETag
+`etag` attribute reflects the current version of an entity for HTTP requests and responses. It is a transient field which is generated from `version` by prepending letter 'v' i.e. `concatenate('v', version)`
+
+**Persistence**
+: `etag` attribute is not persistent and is either part of request or is generated for response.
+
+#### Location
+`location` attribute holds relative path of the business entity it is attached to. It's a transient field and is generated for the responses containing this business entity and also can server as value for `location` header in responses.
+
+**Persistence**
+: `location` attribute is not persistent and is generated for the response.
