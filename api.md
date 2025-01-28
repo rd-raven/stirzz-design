@@ -47,17 +47,15 @@ This api should be used to create or update an inventory item.
             1. assert field `req.inStock` is present and has same value as current stock value in database
             1. assert at least one from `req.add` or `req.remove` fields is present
             1. assert `req.add` and `req.remove` fields not present together at the same time i.e. (they are mutually exclusive)
+            1. assert if `req.remove` field is present then it's value is less than or equal to inventory item's `stock`
 1. **if: (is create request)**
     1. create new inventory item and store in database
     1. respond with **201** general response
 1. **else:** # is update request
     1. **if: (`req.add` field present)**
         1. add the value from `req.add` to current inventory item's `inStock` field
-    1. **else:** # `req.remove` field present
-        1. **if: (`req.remove` > current `stock`)** # value of `req.remove` is greater than current inventory item's `stock`
-            1. respond with **422** general response
-        1. **else:** # `req.remove` <= current `stock` 
-            1. remove from the current inventory item's `inStock` field the value of `req.remove` field present in request
+    1. **else:** # `req.remove` field present and `req.remove` <= current `stock`
+        1. remove from the current inventory item's `inStock` field the value of `req.remove` field present in request
     1. save the change to database
     1. respond with **204** general response
 
