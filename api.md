@@ -43,20 +43,20 @@ This api should be used to create or update an inventory item.
     1. validate body
         1. **if: (is create request)**
             1. assert no fields other than `req.inStock` is present
-        1. **else:** >> is update request
+        1. **else:** # is update request
             1. assert field `req.inStock` is present and has same value as current stock value in database
             1. assert at least one from `req.add` or `req.remove` fields is present
             1. assert `req.add` and `req.remove` fields not present together at the same time i.e. (they are mutually exclusive)
 1. **if: (is create request)**
     1. create new inventory item and store in database
     1. respond with **201** general response
-1. **else:** >> is update request
+1. **else:** # is update request
     1. **if: (`req.add` field present)**
         1. add the value from `req.add` to current inventory item's `inStock` field
-    1. **else:** >> `req.remove` field present
-        1. **if: (`req.remove` > current `stock`)** >> value of `req.remove` is greater than current inventory item's `stock`
+    1. **else:** # `req.remove` field present
+        1. **if: (`req.remove` > current `stock`)** # value of `req.remove` is greater than current inventory item's `stock`
             1. respond with **422** general response
-        1. **else:** >> `req.remove` <= current `stock` 
+        1. **else:** # `req.remove` <= current `stock` 
             1. remove from the current inventory item's `inStock` field the value of `req.remove` field present in request
     1. save the change to database
     1. respond with **204** general response
@@ -79,12 +79,12 @@ To help idempotent methods the HTTP GET method should return etags for the resou
 ## HTTP PUT Request Idempotency Assertion
 HTTP PUT requests are used to either create a single resource or update a single resource. As HTTP PUT is idempotent in nature we need to make sure calling HTTP PUT multiple time results exactly the same on resources as calling it one time. For asserting idempotency in HTTP PUT requests use `ETag` and `If-Match` headers. Clients will have `ETag` value from earlier server responses (see [HTTP GET Response](#http-get-response)), Now if clients needs to send an update single resource request, they should send `If-Match` header with it's value equal to the `ETag` from the latest server response for this resource, and if both values match strongly (character by character) then the request is eligible for update otherwise should be responded with precondition failure.
 
-1. **if: (`If-Match` header present)** >> implies update
+1. **if: (`If-Match` header present)** # implies update
     1. get resource `ETag` (etag value for current version of resource)
-    1. **if: (`ETag` mismatch)** >> `ETag` does not match strongly (character by character) with `If-Match` header value
+    1. **if: (`ETag` mismatch)** # `ETag` does not match strongly (character by character) with `If-Match` header value
         1. respond with 412
     1. **else: (`ETag` matches)** proceed with update
-1. **else-if: (resource already exist)** >> `If-Match` header is absent and create resourse already exists
+1. **else-if: (resource already exist)** # `If-Match` header is absent and create resourse already exists
     1. respond with 409
 1. **else:** proceed with create
 
