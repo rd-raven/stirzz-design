@@ -35,33 +35,38 @@ This api should be used to create or update an inventory item.
     "etag": "$string"
 }
 ```
-- *(upon uncountable items in inventory, the data model should be updated to accomodate that)*
+- *(upon uncountable items e.g. liquids in inventory, the data model should be updated to accomodate that i.e. datatype should change e.g. float than integer)*
 
 #### Implementation Steps:
 1. validate request
-    1. [assert idempotancy](#http-put-request-idempotancy-assertion)
+    1. [assert Idempotency](#http-put-request-idempotency-assertion)
     1. validate body
-        1. **if:** is create request
-            1. assert no field other than `inStock` is present
-        1. **else:** it's update request
-            1. assert field `inStock` is present
-            1. assert at least one from `add` or `remove` fields is present
-            1. assert `add` and `remove` fields not present together at the same time i.e. (they are mutually exclusive)
-1. **if:** is create request
+        1. **if: (is create request)**
+            1. assert no fields other than `req.inStock` is present
+        1. **else:** >> is update request
+            1. assert field `req.inStock` is present and has same value as current stock value in database
+            1. assert at least one from `req.add` or `req.remove` fields is present
+            1. assert `req.add` and `req.remove` fields not present together at the same time i.e. (they are mutually exclusive)
+1. **if: (is create request)**
     1. create new inventory item and store in database
     1. respond with **201** general response
-1. **else:** it's update request
-    1. **if:** `add` field is present in request
-        1. add the value from `add` field in request to current inventory item's `inStock` field
-    1. **else:** `remove` field is present in request
-        1. **if:** value of `remove` is greater than current inventory item's `stock`
+1. **else:** >> is update request
+    1. **if: (`req.add` field present)**
+        1. add the value from `req.add` to current inventory item's `inStock` field
+    1. **else:** >> `req.remove` field present
+        1. **if: (`req.remove` > current `stock`)** >> value of `req.remove` is greater than current inventory item's `stock`
             1. respond with **422** general response
-        1. **else:** remove from the current inventory item's `inStock` field the value of `remove` field present in request
+        1. **else:** >> `req.remove` <= current `stock` 
+            1. remove from the current inventory item's `inStock` field the value of `req.remove` field present in request
     1. save the change to database
     1. respond with **204** general response
 
+- _(create vs update can be determined while processing idempotency assertion in step 1.1)_
 - _(current inventory prefetched in step 1.1 should be reused in update steps)_
-- _(responses should comply with [general responses](#general-responses))_
+- _(responses should comply with [general responses](#general-responses) and [Error Response](#error-response))_
+
+## Idempotency
+HTTP methods like GET, PUT, DELETE are idempotent methods by nature, which means if a request is sent to the server first time using any of these methods and whatever change on application resources occurs on server if any, then this change should not occur ever again if this same request was repeated second, third or any number of times. For example if a request to make stock increase for a prodcut is made to make it 100 from 10 i.e. _10 + 90 = 100_ then if this HTTP PUT request is sent 100 times the stock count should remain 100 rather than _10 + (100 x 90) = 9,010_.
 
 ## HTTP GET Response
 
@@ -71,15 +76,15 @@ By default server should use `accept-language` header to select response languag
 ### ETags to support idempotent methods
 To help idempotent methods the HTTP GET method should return etags for the resources contained in the response. Now for single resource the ETag should be present in both the `ETag` response header as well as in the response payload itself, for multiple resource response the ETags should be present only in response payload and the `ETag` header should not be present in response at all. The etag value generation should be deffered to ORM using an integer version column in database _(see [Data Model](./data-model.md))_, while the final etag value should be with a prepended 'v' character i.e. if data model returned version to be '1' the etag field in response should be 'v1'.
 
-## HTTP PUT Request Idempotancy Assertion
-For asserting idempotency in HTTP PUT requests use `ETag` and `If-Match` headers. Clients will have `ETag` value from earlier server responses (see [HTTP GET Response](#http-get-response)), Now if clients needs to send an update single resource request, they should send `If-Match` header with it's value equal to the `ETag` from the latest server response for this resource, and if both values match strongly (character by character) then the request is eligible for update otherwise should be responded with precondition failure.
+## HTTP PUT Request Idempotency Assertion
+HTTP PUT requests are used to either create a single resource or update a single resource. As HTTP PUT is idempotent in nature we need to make sure calling HTTP PUT multiple time results exactly the same on resources as calling it one time. For asserting idempotency in HTTP PUT requests use `ETag` and `If-Match` headers. Clients will have `ETag` value from earlier server responses (see [HTTP GET Response](#http-get-response)), Now if clients needs to send an update single resource request, they should send `If-Match` header with it's value equal to the `ETag` from the latest server response for this resource, and if both values match strongly (character by character) then the request is eligible for update otherwise should be responded with precondition failure.
 
-1. **if:** `If-Match` header is present
+1. **if: (`If-Match` header present)** >> implies update
     1. get resource `ETag` (etag value for current version of resource)
-    1. **if:** `ETag` does not match strongly (character by character) with `If-Match` header value
+    1. **if: (`ETag` mismatch)** >> `ETag` does not match strongly (character by character) with `If-Match` header value
         1. respond with 412
-    1. **else:** proceed with update
-1. **else-if:** resource already exist
+    1. **else: (`ETag` matches)** proceed with update
+1. **else-if: (resource already exist)** >> `If-Match` header is absent and create resourse already exists
     1. respond with 409
 1. **else:** proceed with create
 
